@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+
+<h1> Movie Search Results: </h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Poster</th>
+    </tr>
+<% for (var i = 0; i < data.Search.length; i++) { %>
+    <tr>
+        <td> <%= data.Search[i].Title %> </td>
+        <td> <%= data.Search[i].Year %> </td>
+        <td> <img src="<%= data.Search[i].Poster %>"> </td>
+    </tr>
+
+<% } %>
+
+</table>
+
+<a href="/"> Repeat Search</a>
+
+<%- include("partials/footer") %>
