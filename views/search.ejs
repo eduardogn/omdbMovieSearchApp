@@ -1,10 +1,21 @@
 <%- include("partials/header") %>
 
-<h1> Search for Movies: </h1>
+
+
+<section class="container text-center align-middle m-auto">
+    <div class=jumbotron>
+
+    <h1> Search for Movies: </h1>
 
 <form action="/results" method="GET">
-    <input type="text" placeholder="search term" name="search">
-    <input type="submit">
+    <div class='form-group d-flex justify-content-center'>
+        <input type="text" class='form-control text-center w-50' placeholder="Search term" name="search">
+    </div>
+    <button type="submit" class='btn btn-primary'>Search</button>
 </form>
+
+</div>
+
+</section>
 
 <%- include("partials/footer") %>

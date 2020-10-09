@@ -20,3 +20,11 @@ th {
 img {
     height: 50%;
 }
+
+button {
+    width: 100px;
+}
+
+.container {
+    margin-top: 30px;
+}

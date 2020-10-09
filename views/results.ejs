@@ -1,23 +1,32 @@
 <%- include("partials/header") %>
 
-<h1> Movie Search Results: </h1>
+<section class="container text-center align-middle">
 
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Year</th>
-        <th>Poster</th>
-    </tr>
-<% for (var i = 0; i < data.Search.length; i++) { %>
-    <tr>
-        <td> <%= data.Search[i].Title %> </td>
-        <td> <%= data.Search[i].Year %> </td>
-        <td> <img src="<%= data.Search[i].Poster %>"> </td>
-    </tr>
+    <h1> Movie Search Results: </h1>
 
-<% } %>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Year</th>
+                <th scope="col">Poster</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (var i = 0; i < data.Search.length; i++) { %>
+                <tr>
+                    <th scope="row" class="align-middle"> <%= i+1 %></th>
+                    <td class="align-middle"> <%= data.Search[i].Title %> </td>
+                    <td class="align-middle"> <%= data.Search[i].Year %> </td>
+                    <td class="align-middle"> <img src="<%= data.Search[i].Poster %>"> </td>
+                </tr>
 
-</table>
+            <% } %>
+        </tbody>
+    </table>
+
+</section>
 
 <a href="/"> Repeat Search</a>
 
