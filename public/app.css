@@ -28,3 +28,7 @@ button {
 .container {
     margin-top: 30px;
 }
+
+.btn-primary {
+    margin: 5px;
+}

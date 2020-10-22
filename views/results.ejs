@@ -4,6 +4,8 @@
 
     <h1> Movie Search Results: </h1>
 
+    <a class="btn btn-primary" href="/"> New Search</a>
+
     <table class="table table-striped">
         <thead class="thead-dark">
             <tr>
@@ -15,19 +17,21 @@
         </thead>
         <tbody>
             <% for (var i = 0; i < data.Search.length; i++) { %>
-                <tr>
-                    <th scope="row" class="align-middle"> <%= i+1 %></th>
-                    <td class="align-middle"> <%= data.Search[i].Title %> </td>
-                    <td class="align-middle"> <%= data.Search[i].Year %> </td>
-                    <td class="align-middle"> <img src="<%= data.Search[i].Poster %>"> </td>
-                </tr>
+            <tr>
+                <th scope="row" class="align-middle"> <%= i+1 %></th>
+                <td class="align-middle"> <%= data.Search[i].Title %> </td>
+                <td class="align-middle"> <%= data.Search[i].Year %> </td>
+                <td class="align-middle"> <img src="<%= data.Search[i].Poster %>"> </td>
+            </tr>
 
             <% } %>
         </tbody>
     </table>
 
+
+
+
 </section>
 
-<a href="/"> Repeat Search</a>
 
 <%- include("partials/footer") %>
