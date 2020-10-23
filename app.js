@@ -20,6 +20,6 @@ app.get("/results", function(req, res){
         });
 });
 
-app.listen("https://omdbmoviesearchapp.herokuapp.com", function(){
+app.listen(3000, function(){
     console.log("Movie API has just started!");
 });
